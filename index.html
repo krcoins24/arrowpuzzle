@@ -1,1458 +1,318 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arrow Escape Quest — Official Legal, Privacy Policy &amp; Terms</title>
-  <meta name="description" content="Official website, Privacy Policy, Data Safety overview, and Terms & Conditions for Arrow Escape Quest (com.choco.animation.arrow) on Android.">
-  <meta name="theme-color" content="#6683FE">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%237C94FE'/%3E%3Cstop offset='100%25' stop-color='%236683FE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M18 32h24M33 21l11 11-11 11' stroke='%23FFFFFF' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
-  <style>
-    :root {
-      --bg-page: #F3F6FD;
-      --bg-soft: #F4F4FE;
-      --surface: #FFFFFF;
-      --surface-muted: #F8FAFF;
-      --primary: #6683FE;
-      --primary-light: #7C94FE;
-      --primary-bright: #91A5FF;
-      --primary-dark: #4B66E4;
-      --ink: #2A303D;
-      --ink-secondary: #4B556B;
-      --muted: #667085;
-      --border: #E1E7F5;
-      --success-bg: #ECFDF3;
-      --success-border: #ABEFC6;
-      --success-ink: #067647;
-      --info-bg: #EEF2FF;
-      --info-border: #C7D2FE;
-      --info-ink: #3730A3;
-      --warn-bg: #FFFAEB;
-      --warn-border: #FEDF89;
-      --warn-ink: #B54708;
-      --shadow-sm: 0 2px 8px rgba(42, 48, 61, 0.05);
-      --shadow-md: 0 12px 32px rgba(102, 131, 254, 0.12);
-      --shadow-lg: 0 20px 44px rgba(42, 48, 61, 0.08);
-      --radius-sm: 10px;
-      --radius-md: 16px;
-      --radius-lg: 24px;
-      --container: 1120px;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 88px;
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(180deg, var(--bg-soft) 0%, var(--bg-page) 45%, #FFFFFF 100%);
-      color: var(--ink);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--primary-dark);
-      text-decoration: none;
-      transition: color 0.2s ease, opacity 0.2s ease;
-    }
-
-    a:hover {
-      color: var(--primary);
-      text-decoration: underline;
-    }
-
-    code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.88em;
-      background: #EEF2FF;
-      color: #3B49A8;
-      padding: 0.15em 0.45em;
-      border-radius: 6px;
-      word-break: break-word;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      min-height: 72px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none !important;
-      flex-shrink: 0;
-    }
-
-    .brand-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-      display: grid;
-      place-items: center;
-      box-shadow: 0 6px 16px rgba(102, 131, 254, 0.28);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .brand-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--ink);
-      letter-spacing: -0.01em;
-    }
-
-    .brand-title span {
-      color: var(--primary);
-    }
-
-    .brand-subtitle {
-      font-size: 0.74rem;
-      font-weight: 600;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links a {
-      display: inline-block;
-      padding: 8px 13px;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--ink-secondary);
-      text-decoration: none;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      background: var(--info-bg);
-      color: var(--primary-dark);
-      text-decoration: none;
-    }
-
-    .nav-cta {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%) !important;
-      color: #FFFFFF !important;
-      box-shadow: 0 4px 12px rgba(102, 131, 254, 0.25);
-    }
-
-    .nav-cta:hover {
-      opacity: 0.94;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: var(--surface-muted);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 8px 10px;
-      cursor: pointer;
-      color: var(--ink);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 56px 0 40px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.9fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .hero-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--info-bg);
-      color: var(--primary-dark);
-      border: 1px solid var(--info-border);
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .hero-badge-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--primary);
-    }
-
-    .hero h1 {
-      margin: 0 0 14px;
-      font-size: clamp(1.9rem, 3.2vw, 2.65rem);
-      line-height: 1.18;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-    }
-
-    .hero h1 span {
-      color: var(--primary);
-    }
-
-    .hero-lead {
-      margin: 0 0 24px;
-      font-size: 1.03rem;
-      color: var(--ink-secondary);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 12px;
-      font-size: 0.93rem;
-      font-weight: 700;
-      text-decoration: none !important;
-      transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: #FFFFFF;
-      box-shadow: 0 8px 20px rgba(102, 131, 254, 0.28);
-    }
-
-    .btn-secondary {
-      background: var(--surface-muted);
-      color: var(--primary-dark);
-      border-color: var(--border);
-    }
-
-    .btn-secondary:hover {
-      background: var(--info-bg);
-    }
-
-    .hero-meta-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      padding-top: 18px;
-      border-top: 1px solid var(--border);
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    .hero-meta-bar strong {
-      color: var(--ink);
-    }
-
-    .app-spec-card {
-      background: linear-gradient(155deg, var(--primary-light) 0%, var(--primary) 55%, var(--primary-dark) 100%);
-      color: #FFFFFF;
-      border-radius: var(--radius-lg);
-      padding: 32px;
-      box-shadow: var(--shadow-md);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .app-spec-card h2 {
-      margin: 0 0 8px;
-      font-size: 1.32rem;
-    }
-
-    .app-spec-card p {
-      margin: 0 0 20px;
-      font-size: 0.94rem;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .spec-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 12px;
-    }
-
-    .spec-item {
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      padding: 12px 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.89rem;
-    }
-
-    .spec-label {
-      color: rgba(255, 255, 255, 0.86);
-      font-weight: 500;
-    }
-
-    .spec-value {
-      font-weight: 700;
-      text-align: right;
-    }
-
-    /* Section Containers */
-    .section {
-      padding: 34px 0;
-    }
-
-    .section-header {
-      margin-bottom: 22px;
-    }
-
-    .section-eyebrow {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-
-    .section-title {
-      margin: 0 0 8px;
-      font-size: clamp(1.45rem, 2.4vw, 1.9rem);
-      color: var(--ink);
-      letter-spacing: -0.015em;
-    }
-
-    .section-desc {
-      margin: 0;
-      color: var(--muted);
-      max-width: 740px;
-    }
-
-    /* Summary Cards & Permissions */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .info-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 22px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .info-card-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 11px;
-      background: var(--info-bg);
-      color: var(--primary-dark);
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      margin-bottom: 14px;
-      font-size: 1.05rem;
-    }
-
-    .info-card h3 {
-      margin: 0 0 8px;
-      font-size: 1.03rem;
-      color: var(--ink);
-    }
-
-    .info-card p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--ink-secondary);
-    }
-
-    /* Tables */
-    .table-wrap {
-      margin-top: 22px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      overflow-x: auto;
-      box-shadow: var(--shadow-sm);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 680px;
-      font-size: 0.92rem;
-    }
-
-    th, td {
-      padding: 14px 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
-    }
-
-    thead th {
-      background: var(--surface-muted);
-      color: var(--ink);
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    .pill {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    .pill-green {
-      background: var(--success-bg);
-      color: var(--success-ink);
-      border: 1px solid var(--success-border);
-    }
-
-    .pill-blue {
-      background: var(--info-bg);
-      color: var(--info-ink);
-      border: 1px solid var(--info-border);
-    }
-
-    .pill-amber {
-      background: var(--warn-bg);
-      color: var(--warn-ink);
-      border: 1px solid var(--warn-border);
-    }
-
-    /* Permissions Grid */
-    .perm-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .perm-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .perm-box h3 {
-      margin: 0 0 12px;
-      font-size: 1.08rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .perm-box ul {
-      margin: 0;
-      padding-left: 20px;
-      color: var(--ink-secondary);
-      font-size: 0.93rem;
-    }
-
-    .perm-box li + li {
-      margin-top: 8px;
-    }
-
-    /* Legal Document Card */
-    .doc-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .doc-toc {
-      background: var(--surface-muted);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 18px 22px;
-      margin-bottom: 28px;
-    }
-
-    .doc-toc-title {
-      margin: 0 0 10px;
-      font-size: 0.88rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      font-weight: 800;
-    }
-
-    .doc-toc-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .doc-block + .doc-block {
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
-
-    .doc-block h3 {
-      margin: 0 0 10px;
-      font-size: 1.18rem;
-      color: var(--ink);
-    }
-
-    .doc-block h4 {
-      margin: 16px 0 8px;
-      font-size: 1rem;
-      color: var(--primary-dark);
-    }
-
-    .doc-block p {
-      margin: 0 0 12px;
-      color: var(--ink-secondary);
-    }
-
-    .doc-block ul, .doc-block ol {
-      margin: 0 0 14px;
-      padding-left: 22px;
-      color: var(--ink-secondary);
-    }
-
-    .doc-block li + li {
-      margin-top: 6px;
-    }
-
-    .callout {
-      border-radius: 12px;
-      padding: 16px 18px;
-      margin: 14px 0;
-      font-size: 0.93rem;
-    }
-
-    .callout-info {
-      background: var(--info-bg);
-      border: 1px solid var(--info-border);
-      color: var(--info-ink);
-    }
-
-    .callout-success {
-      background: var(--success-bg);
-      border: 1px solid var(--success-border);
-      color: var(--success-ink);
-    }
-
-    .callout-warn {
-      background: var(--warn-bg);
-      border: 1px solid var(--warn-border);
-      color: var(--warn-ink);
-    }
-
-    /* Contact Section */
-    .contact-card {
-      background: linear-gradient(135deg, #2A303D 0%, #374157 100%);
-      color: #FFFFFF;
-      border-radius: var(--radius-lg);
-      padding: 36px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-      align-items: center;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .contact-card h2 {
-      margin: 0 0 10px;
-      font-size: 1.65rem;
-    }
-
-    .contact-card p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.84);
-    }
-
-    .contact-details {
-      background: rgba(255, 255, 255, 0.09);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      display: grid;
-      gap: 12px;
-      font-size: 0.93rem;
-    }
-
-    .contact-details a {
-      color: #B4C3FF;
-      font-weight: 700;
-      word-break: break-all;
-    }
-
-    /* Footer */
-    .site-footer {
-      margin-top: 48px;
-      background: #1F2430;
-      color: #D0D7E5;
-      padding: 48px 0 26px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      gap: 28px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .footer-brand-title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #FFFFFF;
-      margin: 0 0 10px;
-    }
-
-    .footer-text {
-      margin: 0 0 14px;
-      font-size: 0.9rem;
-      color: #A7B2C7;
-    }
-
-    .footer-col h4 {
-      margin: 0 0 14px;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #FFFFFF;
-    }
-
-    .footer-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 9px;
-      font-size: 0.9rem;
-    }
-
-    .footer-links a {
-      color: #B6C0D4;
-    }
-
-    .footer-links a:hover {
-      color: #FFFFFF;
-    }
-
-    .footer-bottom {
-      padding-top: 22px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.86rem;
-      color: #9AA5BC;
-    }
-
-    .back-top {
-      color: #B4C3FF;
-      font-weight: 700;
-    }
-
-    /* Responsive */
-    @media (max-width: 980px) {
-      .hero-grid,
-      .contact-card {
-        grid-template-columns: 1fr;
-      }
-
-      .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        background: var(--surface);
-        border-bottom: 1px solid var(--border);
-        flex-direction: column;
-        align-items: stretch;
-        padding: 14px 20px 18px;
-        box-shadow: var(--shadow-md);
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 10px 12px;
-      }
-
-      .perm-grid,
-      .cards-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card,
-      .app-spec-card,
-      .doc-card,
-      .contact-card {
-        padding: 24px 20px;
-      }
-    }
-  </style>
-</head>
-<body id="top">
-
-  <!-- Sticky Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Arrow Escape Quest Home">
-        <div class="brand-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12H19M13 6L19 12L13 18" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <span class="brand-title">Arrow <span>Escape Quest</span></span>
-          <span class="brand-subtitle">Official Privacy, Safety &amp; Terms</span>
-        </div>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mainNav">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-
-      <ul class="nav-links" id="mainNav">
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#data-safety">Data Safety</a></li>
-        <li><a href="#permissions">Permissions</a></li>
-        <li><a href="#privacy-policy">Privacy Policy</a></li>
-        <li><a href="#terms">Terms</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero / Overview Section -->
-    <section class="hero" id="overview">
-      <div class="container hero-grid">
-        <div class="hero-card">
-          <div class="hero-badge">
-            <span class="hero-badge-dot"></span>
-            Google Play Compliant &bull; Effective November 26, 2026
-          </div>
-          <h1>Privacy Policy &amp; Terms for <span>Arrow Escape Quest</span></h1>
-          <p class="hero-lead">
-            <strong>Arrow Escape Quest</strong> is a brain-teasing directional arrow puzzle game for Android featuring
-            <strong>Normal Mode</strong> (100 handcrafted levels plus procedural infinite puzzle progression) and
-            <strong>Daily Challenge Mode</strong> (large 50&times;50 to 100&times;100 maze boards with 3 hearts, hints, and zoom/pan controls).
-            This page transparently explains what local game data stays on your device, how our network-only permissions work, and how
-            <strong>Google AdMob</strong>, <strong>Firebase Analytics</strong>, and <strong>Firebase Crashlytics</strong> keep the game free and reliable.
-          </p>
-          <div class="hero-actions">
-            <a href="#privacy-policy" class="btn btn-primary">Read Privacy Policy</a>
-            <a href="#terms" class="btn btn-secondary">Terms &amp; Conditions</a>
-            <a href="https://play.google.com/store/apps/details?id=com.choco.animation.arrow" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Google Play Store</a>
-          </div>
-          <div class="hero-meta-bar">
-            <span><strong>Package ID:</strong> <code>com.choco.animation.arrow</code></span>
-            <span><strong>App Version:</strong> 3.0</span>
-            <span><strong>Account Required:</strong> No</span>
-          </div>
-        </div>
-
-        <aside class="app-spec-card" aria-label="App Technical Summary">
-          <div>
-            <h2>Play Store Quick Profile</h2>
-            <p>Verified configuration for Arrow Escape Quest on Android.</p>
-          </div>
-          <ul class="spec-list">
-            <li class="spec-item">
-              <span class="spec-label">Platform &amp; Min OS</span>
-              <span class="spec-value">Android 7.0+ (API 24+)</span>
-            </li>
-            <li class="spec-item">
-              <span class="spec-label">Permissions Requested</span>
-              <span class="spec-value">Network Only (Ads &amp; Telemetry)</span>
-            </li>
-            <li class="spec-item">
-              <span class="spec-label">Game Progress Storage</span>
-              <span class="spec-value">On-Device (SharedPreferences)</span>
-            </li>
-            <li class="spec-item">
-              <span class="spec-label">Analytics &amp; Crashes</span>
-              <span class="spec-value">Firebase Analytics &amp; Crashlytics</span>
-            </li>
-            <li class="spec-item">
-              <span class="spec-label">Advertising Partner</span>
-              <span class="spec-value">Google AdMob</span>
-            </li>
-            <li class="spec-item">
-              <span class="spec-label">User Accounts / Login</span>
-              <span class="spec-value">None Required</span>
-            </li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Data Safety Section -->
-    <section class="section" id="data-safety">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Google Play Data Safety Alignment</span>
-          <h2 class="section-title">How Your Data Is Handled</h2>
-          <p class="section-desc">
-            We practice data minimization: Arrow Escape Quest does not ask for your name, email, phone number, contacts, or photos.
-            Only minimal diagnostic, analytics, and ad-delivery data is processed through Google &amp; Firebase SDKs over encrypted connections.
-          </p>
-        </div>
-
-        <div class="cards-grid">
-          <div class="info-card">
-            <div class="info-card-icon">1</div>
-            <h3>Local Game Saves</h3>
-            <p>Your unlocked levels, per-level star scores, and sound toggle stay strictly on your phone inside private <code>game_prefs</code> storage with system backup disabled.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon">2</div>
-            <h3>Google AdMob</h3>
-            <p>Displays ads to keep all 100+ infinite puzzle levels free. AdMob may use the Google Advertising ID and coarse IP region for ad delivery and fraud checks.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon">3</div>
-            <h3>Firebase Analytics</h3>
-            <p>Measures anonymous gameplay trends such as level starts, completions, and Daily Challenge usage so we can balance difficulty across updates.</p>
-          </div>
-          <div class="info-card">
-            <div class="info-card-icon">4</div>
-            <h3>Firebase Crashlytics</h3>
-            <p>Captures crash stack traces, device OS version, and memory state when a bug occurs so we can fix lag, freezes, or board rendering glitches quickly.</p>
-          </div>
-        </div>
-
-        <div class="table-wrap" aria-label="Data Safety Matrix">
-          <table>
-            <thead>
-              <tr>
-                <th>Data Category</th>
-                <th>Service / Component</th>
-                <th>Purpose</th>
-                <th>Stored / Shared</th>
-                <th>User Control &amp; Security</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Game Progress &amp; Preferences</strong><br><small>(Saved level, star scores, audio setting)</small></td>
-                <td>Local Device Storage (<code>game_prefs</code>)</td>
-                <td>Save level progression &amp; UI preferences</td>
-                <td><span class="pill pill-green">On-Device Only</span></td>
-                <td>Wipe anytime via <em>Settings &rarr; Reset Progress</em> or uninstalling the app (<code>allowBackup="false"</code>)</td>
-              </tr>
-              <tr>
-                <td><strong>App Interactions &amp; Usage Events</strong><br><small>(Screen views, session duration, level metrics)</small></td>
-                <td>Firebase Analytics</td>
-                <td>Analytics &amp; puzzle balancing</td>
-                <td><span class="pill pill-blue">Google / Firebase</span></td>
-                <td>Encrypted in transit (HTTPS/TLS); aggregated non-identifying telemetry</td>
-              </tr>
-              <tr>
-                <td><strong>Crash Logs &amp; Diagnostics</strong><br><small>(Stack traces, Installation UUID, OS/RAM state)</small></td>
-                <td>Firebase Crashlytics</td>
-                <td>Stability &amp; bug fixing</td>
-                <td><span class="pill pill-blue">Google / Firebase</span></td>
-                <td>Encrypted in transit (HTTPS/TLS); collected strictly for crash diagnosis</td>
-              </tr>
-              <tr>
-                <td><strong>Device / Advertising ID &amp; Coarse IP</strong><br><small>(Google AD_ID, ad impressions/clicks)</small></td>
-                <td>Google AdMob</td>
-                <td>Advertising, frequency capping &amp; fraud prevention</td>
-                <td><span class="pill pill-amber">Google AdMob</span></td>
-                <td>Encrypted in transit; manage/opt out in Android <em>Settings &rarr; Google &rarr; Ads</em> or GDPR consent prompt</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Permissions Section -->
-    <section class="section" id="permissions">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Minimal Access Principle</span>
-          <h2 class="section-title">App Permissions Breakdown</h2>
-          <p class="section-desc">
-            Arrow Escape Quest strictly requests network-only permissions needed for serving Google AdMob advertisements and transmitting anonymized Firebase telemetry.
-          </p>
-        </div>
-
-        <div class="perm-grid">
-          <div class="perm-box">
-            <h3><span class="pill pill-blue">Used</span> Network &amp; Ad Identifiers</h3>
-            <ul>
-              <li><code>android.permission.INTERNET</code> &mdash; Connects to Google AdMob servers to fetch ads and sends encrypted Firebase Analytics &amp; Crashlytics reports.</li>
-              <li><code>android.permission.ACCESS_NETWORK_STATE</code> &mdash; Checks whether Wi-Fi or mobile data is online before loading ads or syncing telemetry so gameplay never stalls needlessly offline.</li>
-              <li><code>com.google.android.gms.permission.AD_ID</code> &mdash; Standard Google Play Services Advertising ID permission merged automatically by the Google Mobile Ads / Firebase SDKs on Android 13+ for ad measurement and opt-out respect.</li>
-            </ul>
-          </div>
-
-          <div class="perm-box">
-            <h3><span class="pill pill-green">Never Used</span> Sensitive Permissions Blocked</h3>
-            <ul>
-              <li><strong>No Camera or Microphone</strong> access.</li>
-              <li><strong>No Precise GPS Location</strong> (no fine/background location permissions).</li>
-              <li><strong>No Contacts, Call Logs, or SMS</strong> access.</li>
-              <li><strong>No External Storage, Photos, Media, or Files</strong> access outside app-private storage.</li>
-              <li><strong>No Calendar, Health, Bluetooth, or Body Sensors</strong> access.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Privacy Policy Section -->
-    <section class="section" id="privacy-policy">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Legal Documentation</span>
-          <h2 class="section-title">Privacy Policy</h2>
-          <p class="section-desc">
-            <strong>Effective Date:</strong> November 26, 2026 &nbsp;&bull;&nbsp;
-            <strong>Application:</strong> Arrow Escape Quest (<code>com.choco.animation.arrow</code>)
-          </p>
-        </div>
-
-        <article class="doc-card">
-          <div class="doc-toc">
-            <div class="doc-toc-title">Quick Navigation &mdash; Privacy Policy</div>
-            <div class="doc-toc-links">
-              <a href="#pp-1">1. Introduction</a>
-              <a href="#pp-2">2. On-Device Game Data</a>
-              <a href="#pp-3">3. Third-Party SDKs (AdMob &amp; Firebase)</a>
-              <a href="#pp-4">4. How We Use Information</a>
-              <a href="#pp-5">5. App Permissions</a>
-              <a href="#pp-6">6. Data Sharing</a>
-              <a href="#pp-7">7. Data Security</a>
-              <a href="#pp-8">8. Retention &amp; Deletion</a>
-              <a href="#pp-9">9. Children's Privacy</a>
-              <a href="#pp-10">10. GDPR &amp; Regional Rights</a>
-              <a href="#pp-11">11. Policy Changes</a>
-              <a href="#pp-12">12. Contact</a>
-            </div>
-          </div>
-
-          <div class="doc-block" id="pp-1">
-            <h3>1. Introduction &amp; Scope</h3>
-            <p>
-              This Privacy Policy explains how <strong>Arrow Escape Quest</strong> (package identifier <code>com.choco.animation.arrow</code>,
-              also referred to inside the app as "Arrow Escape", "we", "our", or "the App") handles information when you download, install,
-              and play our Android puzzle game via the Google Play Store or visit our official website at
-              <a href="https://kcoca772-commits.github.io/">https://kcoca772-commits.github.io/</a>.
-            </p>
-            <p>
-              By installing or using Arrow Escape Quest, you acknowledge the data practices described in this Privacy Policy. If you do not
-              agree with any part of this Policy, please uninstall the App and discontinue its use.
-            </p>
-          </div>
-
-          <div class="doc-block" id="pp-2">
-            <h3>2. Information Stored Locally on Your Device (No Account Needed)</h3>
-            <p>
-              Arrow Escape Quest does <strong>not</strong> require account creation, login, passwords, or registration. We do not directly collect
-              your real name, email address, home address, phone number, or payment card details inside the game.
-            </p>
-            <p>To deliver seamless offline and online puzzle progression, the App stores gameplay preferences strictly on your device using Android private <code>SharedPreferences</code> (<code>game_prefs</code>):</p>
-            <ul>
-              <li>Your current unlocked level number (<code>saved_level</code>) across Normal Mode and infinite level progression.</li>
-              <li>Per-level completion star ratings (<code>stars_level_*</code>) and gameplay state such as sound toggle (<code>sound_enabled</code>).</li>
-            </ul>
-            <p>
-              System cloud auto-backup is disabled in the app manifest (<code>android:allowBackup="false"</code>), meaning this local save data
-              never leaves your device through us.
-            </p>
-          </div>
-
-          <div class="doc-block" id="pp-3">
-            <h3>3. Information Collected Automatically by Third-Party SDKs</h3>
-            <p>
-              While we do not operate our own user-profile backend servers, Arrow Escape Quest integrates trusted Google services for
-              advertising, anonymized usage analytics, and crash reporting. These third-party SDKs operate over encrypted connections when
-              your device has internet access:
-            </p>
-
-            <h4>3.1 Google AdMob (Advertising)</h4>
-            <p>
-              We use <strong>Google AdMob</strong> (provided by Google LLC) to display in-app advertisements so Arrow Escape Quest can remain free to play.
-              AdMob may automatically collect or process:
-            </p>
-            <ul>
-              <li><strong>Google Advertising ID (AAID / Ad ID)</strong> and device/app identifiers.</li>
-              <li><strong>Approximate / coarse location</strong> inferred from IP address (e.g., country or city level, never GPS).</li>
-              <li><strong>Device and network technical signals</strong> (device model, Android OS version, screen size, language, mobile carrier/network type).</li>
-              <li><strong>Ad interaction &amp; diagnostic data</strong> (ad views, clicks, frequency capping, performance metrics, and invalid-traffic/fraud prevention).</li>
-            </ul>
-            <div class="callout callout-info">
-              <strong>Opting Out of Personalized Ads:</strong> On Android, you can opt out of personalized advertising or reset/delete your Advertising ID
-              at any time via <em>Android Settings &rarr; Privacy (or Google) &rarr; Ads &rarr; Delete advertising ID / Opt out of Ads Personalization</em>,
-              or online at <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.
-              Where required by law (such as the EEA, UK, or Switzerland), we present Google's consent dialog before loading personalized ads.
-            </div>
-
-            <h4>3.2 Firebase Analytics (Google Analytics for Firebase)</h4>
-            <p>
-              We use <strong>Firebase Analytics</strong> to understand aggregate player engagement and improve level design (for example, seeing
-              whether Normal Mode or Daily Challenge levels have difficulty spikes). Firebase Analytics may automatically collect:
-            </p>
-            <ul>
-              <li>Firebase App Instance ID and basic app lifecycle events (first open, session duration, screen views, and in-game puzzle progression metrics).</li>
-              <li>General device characteristics (Android version, device model, app version 3.0, and coarse country/language setting).</li>
-            </ul>
-
-            <h4>3.3 Firebase Crashlytics (Stability &amp; Bug Diagnostics)</h4>
-            <p>
-              We use <strong>Firebase Crashlytics</strong> to automatically detect crashes, ANRs (Application Not Responding), and rendering/animation errors.
-              When a crash or non-fatal diagnostic event occurs, Crashlytics collects:
-            </p>
-            <ul>
-              <li>Crashlytics Installation UUID (non-personal pseudonymous identifier).</li>
-              <li>Full crash stack traces, exception messages, and active thread state.</li>
-              <li>Device state at the moment of the crash (device model, Android OS build, screen orientation, available RAM/free disk space, and app version).</li>
-            </ul>
-          </div>
-
-          <div class="doc-block" id="pp-4">
-            <h3>4. How We Use Collected Information</h3>
-            <ul>
-              <li><strong>Core Gameplay:</strong> Saving your current level, stars earned, and audio preferences locally on your phone.</li>
-              <li><strong>Stability &amp; Performance:</strong> Fixing crashes, zoom/pan lag, and level generation bugs via Firebase Crashlytics.</li>
-              <li><strong>Game Improvement:</strong> Analyzing anonymous completion rates and session trends via Firebase Analytics.</li>
-              <li><strong>Ad-Supported Access:</strong> Serving non-intrusive advertisements and preventing ad fraud via Google AdMob.</li>
-              <li><strong>Legal Compliance &amp; User Support:</strong> Responding to support emails sent voluntarily by you and meeting Google Play Store policy obligations.</li>
-            </ul>
-          </div>
-
-          <div class="doc-block" id="pp-5">
-            <h3>5. App Permissions (Network Access Only)</h3>
-            <p>
-              Arrow Escape Quest is built on a minimal-permission policy. We only declare network permissions required for Google AdMob ads
-              and Firebase diagnostics/analytics:
-            </p>
-            <ul>
-              <li><code>INTERNET</code> &mdash; Allows loading advertisements and transmitting encrypted analytics/crash telemetry.</li>
-              <li><code>ACCESS_NETWORK_STATE</code> &mdash; Allows the App to check network availability before attempting ad or telemetry requests.</li>
-              <li><code>com.google.android.gms.permission.AD_ID</code> &mdash; Included by Google Play Services Ads / Analytics SDKs to read or honor your system Advertising ID preferences on Android 13 and higher.</li>
-            </ul>
-            <p>
-              The App does <strong>not</strong> request access to Camera, Microphone, GPS Location, Contacts, Phone State, SMS, Call Logs, or External Media/Storage.
-            </p>
-          </div>
-
-          <div class="doc-block" id="pp-6">
-            <h3>6. Data Sharing &amp; Third-Party Policies</h3>
-            <p>
-              We do <strong>not</strong> sell your personal information to data brokers. Technical and advertising signals described in Section 3 are
-              shared directly with our infrastructure and monetization provider, <strong>Google LLC</strong> (Google AdMob &amp; Firebase), solely to
-              operate ads, analytics, and crash diagnostics. Please review Google's official policies for further details:
-            </p>
-            <ul>
-              <li>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
-              <li>How Google uses information from apps using its services: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></li>
-              <li>Firebase Privacy and Security: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
-              <li>Google AdMob Policies: <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">https://support.google.com/admob/answer/6128543</a></li>
-            </ul>
-          </div>
-
-          <div class="doc-block" id="pp-7">
-            <h3>7. Data Security &amp; Encryption</h3>
-            <p>
-              All network transmissions performed by Google AdMob, Firebase Analytics, and Firebase Crashlytics are encrypted in transit using
-              industry-standard <strong>HTTPS / TLS</strong>. Local game data inside <code>game_prefs</code> uses Android sandboxed app-private mode
-              (<code>MODE_PRIVATE</code>) with cloud backup disabled so other apps on your device cannot access it. No internet transmission method is
-              100% immune to risk, so we minimize the data collected in the first place.
-            </p>
-          </div>
-
-          <div class="doc-block" id="pp-8">
-            <h3>8. Data Retention &amp; Your Deletion Controls</h3>
-            <p>You stay in control of your data at all times:</p>
-            <ul>
-              <li><strong>Local Game Saves:</strong> Open in-app <em>Settings &rarr; Reset Progress</em> to erase saved levels and star ratings immediately, clear App Storage in Android Settings, or uninstall Arrow Escape Quest to delete all local data permanently.</li>
-              <li><strong>Crashlytics &amp; Analytics Data:</strong> Retained by Firebase according to standard Google Firebase retention schedules (typically 90 days for Crashlytics logs and 2&ndash;14 months for Analytics event data) and automatically purged thereafter.</li>
-              <li><strong>Advertising ID:</strong> Reset or delete your Advertising ID anytime via Android system settings.</li>
-              <li><strong>Support Emails:</strong> If you email <a href="mailto:meettejani1000@gmail.com">meettejani1000@gmail.com</a> for help, you may request deletion of your email correspondence at any time.</li>
-            </ul>
-          </div>
-
-          <div class="doc-block" id="pp-9">
-            <h3>9. Children's Privacy (COPPA &amp; Regional Age Rules)</h3>
-            <div class="callout callout-warn">
-              <strong>Important Notice for Parents &amp; Guardians:</strong> Arrow Escape Quest is designed for a general puzzle audience (ages 13+ or
-              the minimum digital consent age in your country) and is not specifically directed at children under 13. We do not knowingly collect
-              personally identifiable information from children under 13 (or under the applicable age in the EEA/UK).
-            </div>
-            <p>
-              If you are a parent or legal guardian and believe that a child under the applicable age has interacted with the App in a way that
-              provided personal information, please contact us at <a href="mailto:meettejani1000@gmail.com">meettejani1000@gmail.com</a> so we can assist
-              promptly with any deletion or opt-out steps.
-            </p>
-          </div>
-
-          <div class="doc-block" id="pp-10">
-            <h3>10. International Users &amp; Privacy Rights (GDPR / UK / CCPA-CPRA)</h3>
-            <p>Depending on your region (such as the European Economic Area, United Kingdom, Switzerland, or California), you may have specific rights regarding your data:</p>
-            <ul>
-              <li><strong>Right to Know &amp; Transparency:</strong> Clear disclosure of SDK categories and purposes, provided in Sections 2&ndash;6 above.</li>
-              <li><strong>Right to Opt Out / Withdraw Consent:</strong> Withdraw personalized ad consent through the in-app consent message (where applicable) or disable personalized ads in your Android device settings.</li>
-              <li><strong>Right to Deletion:</strong> Clear local progress via Reset Progress / uninstall, delete your Android Advertising ID, or contact us regarding support communications.</li>
-              <li><strong>Non-Discrimination:</strong> You can play Arrow Escape Quest whether you allow or opt out of personalized advertisements.</li>
-              <li><strong>Right to Lodge a Complaint:</strong> EEA/UK residents may contact their local data protection authority if privacy concerns remain unresolved.</li>
-            </ul>
-          </div>
-
-          <div class="doc-block" id="pp-11">
-            <h3>11. Changes to This Privacy Policy</h3>
-            <p>
-              We may update this Privacy Policy from time to time when we add new features, adjust SDK configurations, or comply with updated legal
-              or Google Play requirements. Any updates will be published on this page with an updated Effective Date at the top. Continued use of
-              Arrow Escape Quest after changes take effect constitutes acceptance of the revised Policy.
-            </p>
-          </div>
-
-          <div class="doc-block" id="pp-12">
-            <h3>12. Contact Information</h3>
-            <p>
-              If you have any questions, privacy inquiries, GDPR/CCPA requests, or feedback regarding <strong>Arrow Escape Quest</strong>, contact the developer at:<br>
-              <strong>Email:</strong> <a href="mailto:meettejani1000@gmail.com">meettejani1000@gmail.com</a><br>
-              <strong>Website:</strong> <a href="https://kcoca772-commits.github.io/">https://kcoca772-commits.github.io/</a>
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Terms & Conditions Section -->
-    <section class="section" id="terms">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">End-User License &amp; Rules</span>
-          <h2 class="section-title">Terms &amp; Conditions</h2>
-          <p class="section-desc">
-            <strong>Effective Date:</strong> November 26, 2026 &nbsp;&bull;&nbsp; Applies to all versions of Arrow Escape Quest (<code>com.choco.animation.arrow</code>).
-          </p>
-        </div>
-
-        <article class="doc-card">
-          <div class="doc-toc">
-            <div class="doc-toc-title">Quick Navigation &mdash; Terms &amp; Conditions</div>
-            <div class="doc-toc-links">
-              <a href="#tc-1">1. Acceptance</a>
-              <a href="#tc-2">2. License &amp; Restrictions</a>
-              <a href="#tc-3">3. Game Modes &amp; Virtual Progress</a>
-              <a href="#tc-4">4. Third-Party Ads &amp; Links</a>
-              <a href="#tc-5">5. Intellectual Property</a>
-              <a href="#tc-6">6. App Updates &amp; Availability</a>
-              <a href="#tc-7">7. Disclaimer of Warranties</a>
-              <a href="#tc-8">8. Limitation of Liability</a>
-              <a href="#tc-9">9. Governing Law &amp; Contact</a>
-            </div>
-          </div>
-
-          <div class="doc-block" id="tc-1">
-            <h3>1. Acceptance of Terms</h3>
-            <p>
-              By downloading, accessing, or playing <strong>Arrow Escape Quest</strong> (Package ID: <code>com.choco.animation.arrow</code>),
-              you agree to be bound by these Terms &amp; Conditions and our <a href="#privacy-policy">Privacy Policy</a>.
-              If you do not agree to these Terms, do not install or use the App.
-            </p>
-          </div>
-
-          <div class="doc-block" id="tc-2">
-            <h3>2. License Grant &amp; Fair Use Restrictions</h3>
-            <p>
-              We grant you a limited, non-exclusive, non-transferable, revocable license to download and use Arrow Escape Quest strictly
-              for your personal, non-commercial entertainment on compatible Android devices. You agree <strong>not</strong> to:
-            </p>
-            <ul>
-              <li>Copy, modify, decompile, disassemble, or reverse-engineer the App, puzzle level datasets, or compiled code, except where permitted by applicable law.</li>
-              <li>Use automated bots, scripts, ad-block tampering, or modified APKs to bypass advertisements, manipulate hints/hearts, or disrupt services.</li>
-              <li>Redistribute, repackage, rent, lease, or commercially exploit the App or its assets without written developer permission.</li>
-            </ul>
-          </div>
-
-          <div class="doc-block" id="tc-3">
-            <h3>3. Gameplay Modes, Hearts, Hints &amp; Virtual Progress</h3>
-            <p>
-              Arrow Escape Quest includes Normal Mode (handcrafted levels and infinite generated puzzles), Daily Challenge puzzles, star ratings,
-              hearts, and hint mechanics. All level unlocks, stars, and progress stored locally on your device are purely virtual game states with
-              <strong>zero monetary or real-world cash value</strong>. Because progress is saved only locally without cloud sync, uninstalling
-              the App, clearing device storage, or using <em>Reset Progress</em> permanently removes your saved state.
-            </p>
-          </div>
-
-          <div class="doc-block" id="tc-4">
-            <h3>4. Advertisements &amp; Third-Party Services</h3>
-            <p>
-              The App integrates third-party services including <strong>Google AdMob</strong>, <strong>Firebase Analytics</strong>,
-              <strong>Firebase Crashlytics</strong>, and distribution via <strong>Google Play</strong>. Advertisements displayed within the App
-              are served by Google AdMob; we do not endorse and are not responsible for the accuracy, safety, legality, or content of external
-              websites, products, or apps advertised through third-party ad networks. Your interactions with any advertiser or external link are
-              strictly between you and that third party.
-            </p>
-          </div>
-
-          <div class="doc-block" id="tc-5">
-            <h3>5. Intellectual Property Rights</h3>
-            <p>
-              All rights, title, and interest in and to Arrow Escape Quest &mdash; including but not limited to game mechanics implementation,
-              source code, UI/UX layouts, vector graphics, sound effects, icons, level algorithms, and trademarks &mdash; belong to the developer
-              and/or respective licensors and are protected by copyright and intellectual property laws.
-            </p>
-          </div>
-
-          <div class="doc-block" id="tc-6">
-            <h3>6. App Updates, Changes &amp; Availability</h3>
-            <p>
-              We may release updates to add levels, refine difficulty, fix bugs, or comply with Android OS and Google Play changes. We reserve
-              the right to modify, suspend, or discontinue any part of Arrow Escape Quest (including Daily Challenges, ad placements, or level packs)
-              at any time without prior notice or liability.
-            </p>
-          </div>
-
-          <div class="doc-block" id="tc-7">
-            <h3>7. Disclaimer of Warranties</h3>
-            <p>
-              Arrow Escape Quest is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind,
-              express or implied, including implied warranties of merchantability, fitness for a particular purpose, non-infringement, or uninterrupted
-              error-free operation. You assume full responsibility for device compatibility and mobile data charges incurred while loading ads or updates.
-            </p>
-          </div>
-
-          <div class="doc-block" id="tc-8">
-            <h3>8. Limitation of Liability</h3>
-            <p>
-              To the maximum extent permitted by applicable law, the developer of Arrow Escape Quest shall not be liable for any indirect,
-              incidental, special, consequential, or punitive damages, or any loss of locally saved game progress, data, profits, or device downtime
-              arising out of or related to your use or inability to use the App, even if advised of the possibility of such damages.
-            </p>
-          </div>
-
-          <div class="doc-block" id="tc-9">
-            <h3>9. Governing Law &amp; Contact</h3>
-            <p>
-              These Terms &amp; Conditions shall be governed by and interpreted in accordance with applicable laws without regard to conflict-of-law
-              principles. We may revise these Terms at any time by updating this page. If you have questions about these Terms, please reach out to
-              <a href="mailto:meettejani1000@gmail.com">meettejani1000@gmail.com</a>.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div>
-            <h2>Need Help or Have a Privacy Request?</h2>
-            <p>
-              Have feedback on Normal or Daily Challenge puzzles, spotted a bug, or want to ask a question about Data Safety, AdMob, or your
-              privacy rights? Send us a direct email and include your device model and Android version for faster troubleshooting.
-            </p>
-          </div>
-          <div class="contact-details">
-            <div><strong>Developer Support:</strong><br><a href="mailto:meettejani1000@gmail.com?subject=Arrow%20Escape%20Quest%20Support">meettejani1000@gmail.com</a></div>
-            <div><strong>App Package ID:</strong><br><code>com.choco.animation.arrow</code></div>
-            <div><strong>Google Play Store:</strong><br><a href="https://play.google.com/store/apps/details?id=com.choco.animation.arrow" target="_blank" rel="noopener noreferrer">Open App Listing</a></div>
-            <div><strong>Official Portal:</strong><br><a href="https://kcoca772-commits.github.io/">https://kcoca772-commits.github.io/</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Complete Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <p class="footer-brand-title">Arrow Escape Quest</p>
-          <p class="footer-text">
-            Clean, relaxing, and challenging directional arrow maze puzzles for Android. Normal infinite progression and Daily Challenges
-            built with minimal permissions and transparent Google Play compliance.
-          </p>
-          <p class="footer-text">Package: <code>com.choco.animation.arrow</code> &bull; Version 4.0</p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Website Sections</h4>
-          <ul class="footer-links">
-            <li><a href="#overview">Game Overview</a></li>
-            <li><a href="#data-safety">Play Store Data Safety</a></li>
-            <li><a href="#permissions">Network-Only Permissions</a></li>
-            <li><a href="#contact">Developer Support</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Legal &amp; Compliance</h4>
-          <ul class="footer-links">
-            <li><a href="#privacy-policy">Privacy Policy</a></li>
-            <li><a href="#pp-3">AdMob &amp; Firebase Disclosure</a></li>
-            <li><a href="#pp-9">Children's Privacy</a></li>
-            <li><a href="#terms">Terms &amp; Conditions</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Official &amp; Third-Party Links</h4>
-          <ul class="footer-links">
-            <li><a href="https://play.google.com/store/apps/details?id=com.choco.animation.arrow" target="_blank" rel="noopener noreferrer">Google Play Store</a></li>
-            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
-            <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy</a></li>
-            <li><a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <span>&copy; 2026 Arrow Escape Quest. All rights reserved. Last updated: November 26, 2026.</span>
-        <a href="#top" class="back-top">Back to Top &uarr;</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    (function () {
-      var toggle = document.getElementById("menuToggle");
-      var nav = document.getElementById("mainNav");
-      var links = nav ? nav.querySelectorAll("a") : [];
-
-      if (toggle && nav) {
-        toggle.addEventListener("click", function () {
-          var isOpen = nav.classList.toggle("open");
-          toggle.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        links.forEach(function (link) {
-          link.addEventListener("click", function () {
-            nav.classList.remove("open");
-            toggle.setAttribute("aria-expanded", "false");
-          });
-        });
-      }
-
-      var sections = document.querySelectorAll("main section[id]");
-      window.addEventListener("scroll", function () {
-        var scrollPos = window.scrollY + 120;
-        sections.forEach(function (sec) {
-          var top = sec.offsetTop;
-          var height = sec.offsetHeight;
-          var id = sec.getAttribute("id");
-          var navItem = nav ? nav.querySelector('a[href="#' + id + '"]') : null;
-          if (!navItem || navItem.classList.contains("nav-cta")) return;
-          if (scrollPos >= top && scrollPos < top + height) {
-            nav.querySelectorAll("a").forEach(function (a) { a.classList.remove("active"); });
-            navItem.classList.add("active");
-          }
-        });
-      }, { passive: true });
-    })();
-  </script>
-</body>
-</html>
+:root {
+  --bg: #F8FAFC;
+  --surface: #FFFFFF;
+  --primary: #6683FE;
+  --primary-dark: #4B66E4;
+  --ink: #1E293B;
+  --body: #475569;
+  --muted: #64748B;
+  --border: #E2E8F0;
+  --soft: #EEF2FF;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.68;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--soft);
+  color: #3730A3;
+  padding: 2px 6px;
+  border-radius: 5px;
+  word-break: break-word;
+}
+
+.container {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+  text-decoration: none !important;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--primary);
+  display: grid;
+  place-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: 7px 11px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--body);
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--soft);
+  color: var(--primary-dark);
+}
+
+.menu-btn {
+  display: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 9px;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 36px 0 48px;
+}
+
+.page-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.page-meta {
+  font-size: 0.86rem;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.lead {
+  margin: 0 0 22px;
+  color: var(--body);
+  font-size: 1rem;
+}
+
+h2 {
+  margin: 26px 0 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+h2.no-border {
+  margin-top: 20px;
+  padding-top: 0;
+  border-top: none;
+}
+
+h3 {
+  margin: 16px 0 6px;
+  font-size: 1rem;
+  color: var(--primary-dark);
+}
+
+p {
+  margin: 0 0 12px;
+  color: var(--body);
+}
+
+ul {
+  margin: 0 0 14px;
+  padding-left: 20px;
+  color: var(--body);
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  border: 1px solid var(--border);
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+
+.notice {
+  background: var(--soft);
+  border-left: 3px solid var(--primary);
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin: 14px 0;
+  font-size: 0.94rem;
+  color: var(--ink);
+}
+
+.table-wrap {
+  margin-top: 16px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  font-size: 0.92rem;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  background: var(--bg);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.footer-links a {
+  color: var(--body);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px 16px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .page-card {
+    padding: 22px 18px;
+  }
+}
